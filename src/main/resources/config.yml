@@ -1,0 +1,52 @@
+# ============================================================
+#  USTAWIENIA RYNKU
+# ============================================================
+sell-delay-seconds: 10        # bezpieczne wystawianie: przedmiot trafia na rynek dopiero po X sekundach
+duration-hours: 24            # maksymalny czas oferty na rynku
+commission-percent: 5         # prowizja od sprzedazy (%)
+min-price: 1
+max-price: 1000000000000
+max-listings-per-player: 10
+
+# ============================================================
+#  GUI
+# ============================================================
+gui:
+  # {page} i {pages} podmieniaja sie na numer strony. Mozesz tu wkleic znak (glyph) z resource packa.
+  title: "&8RYNEK &7({page}/{pages})"
+  # ANVIL = okienko kowadla, wyniki pokazuja sie po kazdej wpisanej literce
+  # CHAT  = wpisywanie nazwy na czacie
+  search-mode: ANVIL
+  # Przyciski. Dla tekstur z resource packa ustaw np. material: PAPER oraz model-data.
+  buttons:
+    my-items: { material: CHEST_MINECART, model-data: 0 }
+    sort:     { material: HOPPER_MINECART, model-data: 0 }
+    filter:   { material: FURNACE_MINECART, model-data: 0 }
+    search:   { material: OAK_SIGN, model-data: 0 }
+
+# ============================================================
+#  WIADOMOSCI (kody kolorow &)
+# ============================================================
+messages:
+  usage: "&6Poprawne uzycie /ah open | /rynek otworz"
+  usage-sell: "&6Uzycie: /ah sell <cena>  &7(np. 100, 1k, 100k, 1m)"
+  usage-search: "&6Uzycie: /ah search <nazwa przedmiotu>"
+  invalid-price: "&cNiepoprawna cena! Przyklady: 100, 1k, 100k, 1m"
+  price-range: "&cCena musi byc w zakresie od &f{min} &cdo &f{max}&c."
+  no-item: "&cMusisz trzymac przedmiot w rece!"
+  limit: "&cMozesz miec maksymalnie &f{max} &cofert na rynku."
+  pending: "&7Przedmiot pojawi sie na rynku za &f{seconds}s&7. Mozesz go anulowac w &fTwoje przedmioty&7."
+  listed: "&aTwój przedmiot trafił na rynek za &2{price}"
+  sold: "&aTwój przedmiot został sprzedany za &2{price}"
+  sold-chat: "&7Otrzymano &a{net} &7(prowizja {commission}%)."
+  bought: "&aKupiles przedmiot za &2{price}"
+  expired: "&eJedna z Twoich ofert wygasla. Odbierz przedmiot w &f/ah open &e-> Twoje przedmioty."
+  claims-reminder: "&eMasz przedmioty do odebrania na rynku! &f/ah open &e-> Twoje przedmioty."
+  cancelled: "&eOferta anulowana, przedmiot wrocil do Twojego ekwipunku."
+  gone: "&cTa oferta nie jest juz dostepna."
+  own-item: "&cTo Twoja oferta! Anuluj ja w &fTwoje przedmioty&c."
+  no-money: "&cNie stac Cie na ten przedmiot!"
+  inv-full: "&cMasz pelny ekwipunek!"
+  search-prompt: "&6Wpisz na czacie nazwe przedmiotu (np. miecz, kilof, klata). Wpisz &fanuluj &6aby wrocic."
+  no-permission: "&cBrak uprawnien."
+  reloaded: "&aPrzeladowano konfiguracje i slownik wyszukiwania."
